@@ -50,17 +50,32 @@ def program2(cost, milesDriven, gasPrice, milesPerGallon, resaleValue = None, re
 
     return total
 
+"""
+3. Write a program that reads two times in military format (0900, 1730) and prints the
+number of hours and minutes between the two times. Here is a sample run. User input
+is in color.
+"""
+
+def program3(time1, time2):
+    timeDifference = str(abs(time2 - time1))
+
+    if len(timeDifference) == 3:
+        print("%s hours %s minutes" % (timeDifference[0], timeDifference[1:]))
+    else:
+        print("%s hours %s minutes" % (timeDifference[:2], timeDifference[2:]))
+
+
 
 
 if __name__ == "__main__":
-    """
+    # Program 1
     num1 = int(input("Enter an integer:\n"))
     num2 = int(input("Enter another integer:\n"))
 
 
     program1(num1, num2)
-    """
 
+    # Program 2
     MILES_DRIVEN = 15000
 
     cost = int(input("Enter the cost of the non-hybrid vehicle:\n"))
@@ -68,12 +83,16 @@ if __name__ == "__main__":
     milesPerGallon = float(input("Enter the miles per gallon given by this vehicle:\n"))
     resaleValue = int(input("Enter the resale value of this vehicle after 5 years:\n"))
     
-
     baseTotal = program2(cost, MILES_DRIVEN, gasPrice, milesPerGallon)
     resaleTotal = program2(cost, MILES_DRIVEN, gasPrice,  milesPerGallon, resaleValue, True)
 
     print("Total cost for a 2020 Stock Ford Escape (not including resale): $%s" % baseTotal)
     print("Total cost for a 2020 Stock Ford Escape (including resale): $%s" % resaleTotal)
     
+    # Program 3
+    time1 = int(input("Please enter the first time:\n"))
+    time2 = int(input("Please enter the second time:\n"))
+
+    program3(time1, time2)
 
     
