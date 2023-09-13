@@ -43,50 +43,50 @@ def program2():
 
 
 def program3():
-    spring = ['March','April','May']
-    summer = ['June', 'July', 'August']
-    fall = ['September', 'October', 'November']
-    winter = ['December', 'January', 'February']
+    spring = ["March", "April", "May"]
+    summer = ["June", "July", "August"]
+    fall = ["September", "October", "November"]
+    winter = ["December", "January", "February"]
 
-    month = input('Enter a month: \n')
-    day = int(input('Enter a day:\n'))
+    month = input("Enter a month: \n")
+    day = int(input("Enter a day:\n"))
 
-
-    if day <= 0 or day >= 31 or (month == 'February' and day > 29):
-        print('Invalid day supplied')
+    if day <= 0 or day > 31 or (month == "February" and day > 29):
+        print("Invalid day supplied")
     else:
         if month in spring:
-            if month == 'March' and day >= 20:
-                print('Spring')
-            elif day <= 20 and month == 'March':
-                print('Winter')
+            if month == "March" and day >= 20:
+                print("Spring")
+            elif day <= 20 and month == "March":
+                print("Winter")
             else:
-                print('Spring')
+                print("Spring")
         elif month in summer:
-            if month == 'June' and day >= 20:
-                print('Summer')
-            elif day <= 20 and month == 'June':
-                print('Spring')
+            if month == "June" and day >= 20:
+                print("Summer")
+            elif day <= 20 and month == "June":
+                print("Spring")
             else:
-                print('Summer')
+                print("Summer")
         elif month in fall:
-            if month == 'September' and day >= 22:
-                print('Autumn')
-            elif day <= 22 and month == 'September':
-                print('Summer')
+            if month == "September" and day >= 22:
+                print("Autumn")
+            elif day <= 22 and month == "September":
+                print("Summer")
             else:
-                print('Autumn')
+                print("Autumn")
         elif month in winter:
-            if month == 'December' and day >= 21:
-                print('Winter')
-            elif day <= 21 and month == 'December':
-                print('Fall')
-            else: 
-                print('Winter')
+            if month == "December" and day >= 21:
+                print("Winter")
+            elif day <= 21 and month == "December":
+                print("Fall")
+            else:
+                print("Winter")
         else:
-            print('Invalid month supplied')
+            print("Invalid month supplied")
 
 
-
-
-program3()
+if __name__ == "__main__":
+    program1()
+    program2()
+    program3()
