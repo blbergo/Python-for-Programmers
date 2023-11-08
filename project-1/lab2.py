@@ -39,6 +39,7 @@ def validate(val):
 
     if val != "q":
         print("Too many invalid inputs. Exiting...")
+        exit()
 
 while iterate:
     inputs = []

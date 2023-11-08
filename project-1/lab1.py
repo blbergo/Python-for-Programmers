@@ -1,7 +1,8 @@
 def lab1():
     text = input("Enter a sample text:\n")
-
+    print(f'\nyou entered: {text}')
     print_menu()
+
     choice = input()
     execute_menu(choice, text)
 
@@ -11,8 +12,9 @@ def print_menu():
     print("c - Number of non-whitespace chars")
     print("w - Number of words")
     print("f - Fix capitalization")
-    print("r - replace punctuation")
-    print("s - shorten spaces\n")
+    print("r - Replace punctuation")
+    print("s - Shorten spaces")
+    print("q - Quit\n")
 
 
 def execute_menu(choice, text):
@@ -26,7 +28,10 @@ def execute_menu(choice, text):
 
     while choice != "q":
         computed[choice](text)
+        print_menu()
         choice = input()
+
+    print("Goodbye!")
 
 
 def get_num_of_non_WS_characters(text):
@@ -60,9 +65,10 @@ def fix_capitalization(text):
     print(f"Number of letters capitalized: {count}")
     print(f"Edited text: {s}")
 
+
 def replace_punctuation(text):
-    exclamationCount = len(text.replace("!", ""))
-    semicolonCount = len(text.replace(";", ""))
+    exclamationCount =len(text) -  len(text.replace("!", ""))
+    semicolonCount = len(text) - len(text.replace(";", ""))
 
     text = text.replace("!", ".")
     text = text.replace(";", ",")
@@ -77,6 +83,7 @@ def replace_punctuation(text):
 def shorten_space(text):
     text = text.replace("  ", " ")
     print(f"Edited text: {text}")
+
 
 if __name__ == "__main__":
     lab1()
