@@ -36,7 +36,7 @@ def lab1():
             print("Invalid choice!")
 
 
-# lab1()
+lab1()
 
 
 # lab 2
@@ -154,7 +154,7 @@ def lab2():
     printPolynomial(q)
 
 
-# lab2()
+lab2()
 
 
 def lab3():
@@ -169,7 +169,7 @@ def lab3():
     print("Letters in t but not in s:", t.difference(s) or "T is a subset of S")
 
 
-# lab3()
+lab3()
 
 
 def build_dictionary():
